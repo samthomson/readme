@@ -3,7 +3,7 @@
 ## Docker
 `docker ps`: List all running containers
 
-`docker stop [ID]`: Stop a running/rogue container via its ID (as garnared with `docker ps`)
+`docker stop [ID]`: Stop a running/rogue container via its ID (as garnared from running `docker ps`)
 
 ## docker-compose
 
