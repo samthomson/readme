@@ -14,3 +14,5 @@
 `docker-compose down` - reverse of up, stop running containers as specified in local docker compose file. If a container is removed from that file since between running `up` and `down` commands, it will not be stopped.
 
 After changing env values that are passed into containers via the docker-compose.yml file all containers should be stopped and started again so that these values are propogated. ie. `docker-compose down` followed by `docker-compose up [-d]`.
+
+`docker-compose up -d --no-deps --build <container>` rebuild a specific container, eg after changing its Dockerfile.
