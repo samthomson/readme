@@ -15,4 +15,4 @@
 
 After changing env values that are passed into containers via the docker-compose.yml file all containers should be stopped and started again so that these values are propogated. ie. `docker-compose down` followed by `docker-compose up [-d]`.
 
-`docker-compose up -d --no-deps --build <container>` rebuild a specific container, eg after changing its Dockerfile.
+`docker-compose up -d --force-recreate --build <container>` rebuild a specific container, eg after changing its Dockerfile.
