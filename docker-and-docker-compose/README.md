@@ -22,3 +22,5 @@ After changing env values that are passed into containers via the docker-compose
 Delete old containers that aren't used anymore but taking up disk space: `docker system prune`
 
 Even better: `docker system prune -a`
+
+(see here https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers)
