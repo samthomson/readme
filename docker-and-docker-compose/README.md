@@ -24,3 +24,5 @@ Delete old containers that aren't used anymore but taking up disk space: `docker
 Even better: `docker system prune -a`
 
 (see here https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers)
+
+In production, this folder will swell: `/var/lib/docker/volumes/` could be worth emptying occasionally.
