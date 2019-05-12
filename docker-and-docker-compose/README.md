@@ -29,3 +29,5 @@ Even better: `docker system prune -a`
 (see here https://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers)
 
 In production, this folder will swell: `/var/lib/docker/volumes/` could be worth emptying occasionally. Although that will mean you need to restart containers who have lost volumes. In which case use `docker-compose down -v` so that the containers know their volumes are gone, otherwise you'll get missing volume errors.
+
+`docker-compose down -v` to stop containers and volumes. Useful before cleaning out mysql
