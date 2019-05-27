@@ -31,3 +31,19 @@ Even better: `docker system prune -a`
 In production, this folder will swell: `/var/lib/docker/volumes/` could be worth emptying occasionally. Although that will mean you need to restart containers who have lost volumes. In which case use `docker-compose down -v` so that the containers know their volumes are gone, otherwise you'll get missing volume errors.
 
 `docker-compose down -v` to stop containers and volumes. Useful before cleaning out mysql
+
+## rebuild container that stores state in a volume
+
+For example, rebuilding a mysql container as if from scratch, after changing base config.
+
+`docker volume ls` to list all volumes
+
+then `docker voume rm app_mysqldata`
+
+if volume was in use:
+
+```
+Error response from daemon: remove app_mysqldata: volume is in use - [e9e49d63a753aac24d1deb8f4511a1acb771417d9c00d8ed85241efcd601b45b]
+```
+
+then do `docker stop e9e49d63a753aac24d1deb8f4511a1acb771417d9c00d8ed85241efcd601b45b` but with correct container hash.
