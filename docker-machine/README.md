@@ -4,9 +4,15 @@
 
 This guide assumes you are using Digital ocean and have an API key.
 
+### script based creation
+
+copy `./bash/.env.sample` to `./bash/.env` and fill in the relevant env vars. Then run `./bash/create-remote-host.sh`.
+
+### manual setup
+
 `test-machine` is used for the machine/host-name. Replace that with what you want to reference the machine with. That name will show up in your DO control panel.
 
-- Inject your Digital ocean API key into the local environemt: `export DO_TOKEN="INSERT_TOKEN_HERE"`
+- Inject your Digital ocean API key into the local environment: `export DO_TOKEN="INSERT_TOKEN_HERE"`
 - create remote machine: `docker-machine create --driver=digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size=s-1vcpu-1gb --digitalocean-region=nyc1 test-machine`
 - set as 'active machine' (docker-wise) `eval $(docker-machine env test-machine)`
 - `docker-machine ip test-machine` to get machines IP, or `docker-machine ls` to see all
