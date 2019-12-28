@@ -1,14 +1,17 @@
 # docker-machine
 
-## creating a remote docker host with digital ocean
+## 1. Creating a remote docker host with digital ocean
 
 This guide assumes you are using Digital ocean and have an API key.
 
-### script based creation
+### 1.1 Script based creation
 
-copy `./bash/.env.sample` to `./bash/.env` and fill in the relevant env vars. Then run `./bash/create-remote-host.sh`.
+1. `cp ./bash/.env.sample /bash/.env`
+2. fill in values in `/bash/.env`
+3. `bash ./bash/create-remote-host.sh`
+4. Optional: `bash ./bash/enable-swap-remotely.sh`
 
-### manual setup
+### 1.2 Manual setup
 
 `test-machine` is used for the machine/host-name. Replace that with what you want to reference the machine with. That name will show up in your DO control panel.
 
@@ -22,3 +25,8 @@ copy `./bash/.env.sample` to `./bash/.env` and fill in the relevant env vars. Th
 Optional: If your server is basic (eg $5 vps), you may want to enable swap memory. You can do that manually or just run `bash ./bash/enable-swap-remotely.sh` from project root (will transfer a script to the docker-host which then creates a 2GB swap file - script assumes an ubuntu linux server).
 Note: That script reads a host var from `.env`
 Note: In case you want to validate swap is enabled on the remote docker host, run `docker-machine ssh test-machine "free"` and check the 'Swap:' amounts match the memory amount specified when creating the swap file (2GB if you used the included script).
+
+## 2. Killing a remote docker host
+
+1. Ensure local `.env` file is populated as in 1.1.
+2. `bash ./bash/kill-remote-host.sh`
