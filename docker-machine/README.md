@@ -11,6 +11,14 @@ This guide assumes you are using Digital ocean and have an API key.
 3. `bash ./bash/create-remote-host.sh`
 4. Optional: `bash ./bash/enable-swap-remotely.sh`
 
+#### optional
+
+For the VPS/docker-machine to clone private repos, the servers ssh key will need to be added to github.
+
+1. follow both sections [here](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate an ssh key on the server
+2. run `cat ~/.ssh/id_ed25519.pub` and copy the contents to clipboard
+3. go [here](https://github.com/settings/keys) and add the key to account
+
 ### 1.2 Manual setup
 
 `test-machine` is used for the machine/host-name. Replace that with what you want to reference the machine with. That name will show up in your DO control panel.
