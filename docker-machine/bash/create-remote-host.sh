@@ -1,7 +1,9 @@
 #!bin/bash
 
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
 # read env var to get host details
-source .env
+source $SCRIPTPATH/.env
 
 # check env vars
 echo "we'll create a VPS called $DOCKER_HOST"
