@@ -30,3 +30,15 @@ Note: In case you want to validate swap is enabled on the remote docker host, ru
 
 1. Ensure local `.env` file is populated as in 1.1.
 2. `bash ./bash/kill-remote-host.sh`
+
+
+## 3. moving a docker host to another machine
+
+From [this thread](https://github.com/docker/machine/issues/3212#issuecomment-361333628).
+
+1.  Install npm package globally `machine-import`.
+2. export the docker-machine on the original host. `machine-export <machine-name>`
+3. transfer the resulting zip file to new machine
+3. import the zip file. `machine-import <machine-name>.zip`
+
+run `docker-machine ls` to check it's been added.
