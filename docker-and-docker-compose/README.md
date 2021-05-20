@@ -47,3 +47,7 @@ Error response from daemon: remove app_mysqldata: volume is in use - [e9e49d63a7
 ```
 
 then do `docker stop e9e49d63a753aac24d1deb8f4511a1acb771417d9c00d8ed85241efcd601b45b` but with correct container hash.
+
+## docker stats
+
+To be run on the host `docker stats` displays a live summary of running containers' resource usage; CPU, Memory, etc.
