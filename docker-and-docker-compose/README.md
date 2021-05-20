@@ -20,6 +20,11 @@ After changing env values that are passed into containers via the docker-compose
 
 `docker-compose up -d --force-recreate --build <container>` rebuild a specific container, eg after changing its Dockerfile.
 
+### run with overloaded env vars
+
+For instance, bash into a container and overload the LOG_LEVEL (which is otherwise set in the `docker-compose.prod.yml` file): 
+`docker-compose -f docker-compose.prod.yml run -e LOG_LEVEL=info api sh`
+
 # related
 
 Delete old containers that aren't used anymore but taking up disk space: `docker system prune`
