@@ -43,7 +43,7 @@ For example, rebuilding a mysql container as if from scratch, after changing bas
 
 `docker volume ls` to list all volumes
 
-then `docker voume rm app_mysqldata`
+then `docker volume rm app_mysqldata`
 
 if volume was in use:
 
