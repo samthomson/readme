@@ -7,6 +7,7 @@
 `docker stop [ID]`: Stop a running/rogue container via its ID (as garnared from running `docker ps`)
 
 `docker images` lists all built images, that may or may not be in use, along with their size.
+- `docker images -a ` includes intermediate images.
 
 ## docker-compose
 
