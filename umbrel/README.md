@@ -8,3 +8,4 @@ download macaroon to local machine:
 
 `scp umbrel@umbrel.local:~/umbrel/app-data/lightning/data/lnd/data/chain/bitcoin/mainnet/admin.macaroon ~/admin.macaroon`
 
+get proto files here: https://lightning.engineering/api-docs/api/lnd/
